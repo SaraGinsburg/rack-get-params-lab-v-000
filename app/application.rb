@@ -22,7 +22,7 @@ class Application
       end
     elsif req.path.match(/add/)
       item_to_add = req.params["item"]
-      binding.pry
+      # binding.pry
 
       # expect(last_response.body).to include("added Figs")
       # expect(Application.class_variable_get(:@@cart)).to include("Figs")
