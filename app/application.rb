@@ -23,7 +23,13 @@ class Application
     elsif req.path.match(/add/)
       item_to_add = req.params["item"]
       binding.pry
+
+      # expect(last_response.body).to include("added Figs")
+      # expect(Application.class_variable_get(:@@cart)).to include("Figs")
+
+
       if @@items.include?(item_to_add)
+        @@cart << item_to_add
         resp.write "added #{item_to_add}"
       else
         resp.write "We don't have that item"
